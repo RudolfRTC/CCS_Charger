@@ -1,0 +1,540 @@
+VERSION "1.4.0"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU CMS
+VAL_TABLE_ EVSENotificationMaxDelay -1 "SNA" ;
+
+
+BO_ 2147491846 EVMacAddress: 8 CMS
+ SG_ EVMacAddress : 0|48@1+ (1,0) [0|281474976710655] ""  VCU
+
+BO_ 2147491845 HardwareConfig: 8 VCU
+ SG_ ConfigGPIO7 : 12|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO6 : 10|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO5 : 8|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO4 : 6|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO3 : 4|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO2 : 2|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ConfigGPIO1 : 0|2@1+ (1,0) [0|3] ""  CMS
+
+BO_ 2147488776 EVSEID5: 8 CMS
+ SG_ EVSEID5 : 0|48@1+ (1,0) [0|281474976710655] ""  VCU
+
+BO_ 2147488775 EVSEID4: 8 CMS
+ SG_ EVSEID4 : 0|64@1+ (1,0) [0|1.84467440737096E+019] ""  VCU
+
+BO_ 2147488774 EVSEID3: 8 CMS
+ SG_ EVSEID3 : 0|64@1+ (1,0) [0|1.84467440737096E+019] ""  VCU
+
+BO_ 2147488773 EVSEID2: 8 CMS
+ SG_ EVSEID2 : 0|64@1+ (1,0) [0|1.84467440737096E+019] ""  VCU
+
+BO_ 2147488772 EVSEID1: 8 CMS
+ SG_ EVSEID1 : 0|64@1+ (1,0) [0|1.84467440737096E+019] ""  VCU
+
+BO_ 2147488771 EVSEDateTime: 8 CMS
+ SG_ EVSEDateTimeNow : 0|64@1+ (1,0) [0|1.84467440737096E+019] ""  VCU
+
+BO_ 2147491844 HardwareStatus: 8 CMS
+ SG_ GPIO7Status : 12|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO6Status : 10|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO5Status : 8|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO4Status : 6|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO3Status : 4|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO2Status : 2|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO1Status : 0|2@1+ (1,0) [0|3] ""  VCU
+ SG_ GPIO7ADCValue : 40|12@1+ (1,0) [0|4094] ""  VCU
+ SG_ GPIO2ADCValue : 28|12@1+ (1,0) [0|4094] ""  VCU
+ SG_ GPIO1ADCValue : 16|12@1+ (1,0) [0|4094] ""  VCU
+
+BO_ 2147491843 SLACInfo: 8 CMS
+ SG_ MeasuredAttenuation : 8|8@1+ (0.5,0) [0|100] "dB"  VCU
+ SG_ LinkStatus : 3|2@1+ (1,0) [0|3] ""  VCU
+ SG_ SLACState : 0|3@1+ (1,0) [0|7] ""  VCU
+
+BO_ 2147488517 EVDCEnergyLimits: 8 VCU
+ SG_ EVEnergyRequest : 16|16@1+ (100,0) [0|3276700] "Wh"  CMS
+ SG_ EVEnergyCapacity : 0|16@1+ (100,0) [0|3276700] "Wh"  CMS
+
+BO_ 2148073472 BootConfig: 8 CMS
+ SG_ BootloaderVersion : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2147491842 ErrorCodes: 8 CMS
+ SG_ ErrorCodeLevel3 : 48|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ ErrorCodeLevel2 : 32|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ ErrorCodeLevel1 : 16|16@1+ (1,0) [0|65535] ""  VCU
+ SG_ ErrorCodeLevel0 : 0|16@1+ (1,0) [0|65535] ""  VCU
+
+BO_ 2147487744 ChargeInfo: 8 CMS
+ SG_ BCBStatus : 30|2@1+ (1,0) [0|3] ""  VCU
+ SG_ AliveCounter : 36|4@1+ (1,0) [0|15] ""  VCU
+ SG_ EVSECompatible : 28|2@1+ (1,0) [0|3] ""  VCU
+ SG_ VoltageMatch : 26|2@1+ (1,0) [0|3] ""  VCU
+ SG_ ControlPilotState : 12|4@1+ (1,0) [0|15] ""  VCU
+ SG_ ControlPilotDutyCycle : 0|7@1+ (1,0) [0|100] "%"  VCU
+ SG_ TCPStatus : 32|2@1+ (1,0) [0|3] ""  VCU
+ SG_ ActualChargeProtocol : 16|4@1+ (1,0) [0|15] ""  VCU
+ SG_ SwS2Close : 24|2@1+ (1,0) [0|3] ""  VCU
+ SG_ ProximityPinState : 20|4@1+ (1,0) [0|15] ""  VCU
+ SG_ StateMachineState : 8|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 2147488516 EVPlugStatus: 8 VCU
+ SG_ EVProximityPinState : 12|4@1+ (1,0) [0|15] ""  CMS
+ SG_ EVControlPilotState : 8|4@1+ (1,0) [0|15] ""  CMS
+ SG_ EVControlPilotDutyCycle : 0|7@1+ (1,0) [0|100] "%"  CMS
+
+BO_ 2147488770 EVSEDCStatus: 8 CMS
+ SG_ EVSENotificationMaxDelay : 48|16@1+ (1,0) [0|65534] "s"  VCU
+ SG_ EVSENotification : 38|2@1+ (1,0) [0|3] ""  VCU
+ SG_ EVSEStatusCode : 40|4@1+ (1,0) [0|15] ""  VCU
+ SG_ EVSEPowerLimitAchieved : 46|2@1+ (1,0) [0|3] ""  VCU
+ SG_ EVSEVoltageLimitAchieved : 36|2@1+ (1,0) [0|3] ""  VCU
+ SG_ EVSECurrentLimitAchieved : 44|2@1+ (1,0) [0|3] ""  VCU
+ SG_ EVSEIsolationStatus : 32|3@1+ (1,0) [0|7] ""  VCU
+ SG_ EVSEPresentCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  VCU
+ SG_ EVSEPresentVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  VCU
+
+BO_ 2147488769 EVSEDCRegulationLimits: 8 CMS
+ SG_ EVSECurrentRegulationTolerance : 40|8@1+ (0.2,0) [0|50] "A"  VCU
+ SG_ EVSEPeakCurrentRipple : 32|8@1+ (0.2,0) [0|50] "A"  VCU
+ SG_ EVSEMinVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  VCU
+ SG_ EVSEMinCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  VCU
+
+BO_ 2147488768 EVSEDCMaxLimits: 8 CMS
+ SG_ EVSEEnergyToBeDelivered : 48|16@1+ (100,0) [0|3276700] "Wh"  VCU
+ SG_ EVSEMaxPower : 32|16@1+ (100,0) [0|3276700] "W"  VCU
+ SG_ EVSEMaxVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  VCU
+ SG_ EVSEMaxCurrent : 0|16@1+ (0.1,0) [0|6500] "A"  VCU
+
+BO_ 2147488514 EVStatusControl: 8 VCU
+ SG_ BCBControl : 16|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ChargeProtocolPriority : 8|8@1+ (1,0) [0|255] ""  CMS
+ SG_ EVWeldingDetectionEnable : 6|2@1+ (1,0) [0|3] ""  CMS
+ SG_ EVReady : 4|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ChargeStopIndication : 2|2@1+ (1,0) [0|3] ""  CMS
+ SG_ ChargeProgressIndication : 0|2@1+ (1,0) [0|3] ""  CMS
+
+BO_ 2147488515 EVStatusDisplay: 8 VCU
+ SG_ EVRESSConditioning : 18|2@1+ (1,0) [0|3] ""  CMS
+ SG_ EVTimeToFullSoC : 40|18@1+ (1,0) [0|262142] "s"  CMS
+ SG_ EVTimeToBulkSoC : 20|18@1+ (1,0) [0|262142] "s"  CMS
+ SG_ EVErrorCode : 12|4@1+ (1,0) [0|15] ""  CMS
+ SG_ EVCabinConditioning : 16|2@1+ (1,0) [0|3] ""  CMS
+ SG_ EVBulkChargingComplete : 10|2@1+ (1,0) [0|3] ""  CMS
+ SG_ EVChargingComplete : 8|2@1+ (1,0) [0|3] ""  CMS
+ SG_ EVSoC : 0|8@1+ (0.5,0) [0|100] ""  CMS
+
+BO_ 2147488513 EVDCChargeTargets: 8 VCU
+ SG_ EVPreChargeVoltage : 32|16@1+ (0.1,0) [0|6500] "V"  CMS
+ SG_ EVTargetVoltage : 16|16@1+ (0.1,0) [0|6500] "V"  CMS
+ SG_ EVTargetCurrent : 0|16@1+ (0.1,-3250) [-3250|3250] "A"  CMS
+
+BO_ 2147488512 EVDCMaxLimits: 8 VCU
+ SG_ EVBulkSoC : 56|8@1+ (0.5,0) [0|100] "%"  CMS
+ SG_ EVFullSoC : 48|8@1+ (0.5,0) [0|100] "%"  CMS
+ SG_ EVMaxVoltage : 32|16@1+ (0.1,0) [0|6500] "V"  CMS
+ SG_ EVMaxPower : 16|16@1+ (100,0) [0|3276700] "W"  CMS
+ SG_ EVMaxCurrent : 0|16@1+ (0.1,0) [0|6500] "A"  CMS
+
+BO_ 2147491841 SoftwareInfo: 8 CMS
+ SG_ SoftwareVersionConfig : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ SoftwareVersionPatch : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ SoftwareVersionMinor : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ SoftwareVersionMajor : 0|8@1+ (1,0) [0|255] ""  VCU
+
+
+
+CM_ BO_ 2147491846 "This message contains the MAC address of the charge module's charging/PLC interface.";
+CM_ SG_ 2147491846 EVMacAddress "This signal is the EV's MAC address of the charging port as stored inside the EEPROM of the module.";
+CM_ BO_ 2147491845 "This message contains the desired user configurable GPIO configuration of the module.";
+CM_ SG_ 2147491845 ConfigGPIO7 "Configuration of GPIO 7.";
+CM_ SG_ 2147491845 ConfigGPIO6 "Configuration of GPIO 6.";
+CM_ SG_ 2147491845 ConfigGPIO5 "Configuration of GPIO 5.";
+CM_ SG_ 2147491845 ConfigGPIO4 "Configuration of GPIO 4.";
+CM_ SG_ 2147491845 ConfigGPIO3 "Configuration of GPIO 3.";
+CM_ SG_ 2147491845 ConfigGPIO2 "Configuration of GPIO 2.";
+CM_ SG_ 2147491845 ConfigGPIO1 "Configuration of GPIO 1";
+CM_ BO_ 2147488776 "This message contains the EVSE ID byte 32 to 37. It is only transmitted for ISO charging. In DIN, the maximum EVSEID length is 32, so this message is omitted.";
+CM_ SG_ 2147488776 EVSEID5 "The EVSE ID length is 32 bytes in DIN and 37 bytes in ISO. So, the EVSE ID is handled in 5 messages
+This signal is EVSE ID byte 32 to 37. ";
+CM_ BO_ 2147488775 "This message contains the EVSE ID byte 24 to 31.";
+CM_ SG_ 2147488775 EVSEID4 "The EVSE ID length is 32 bytes in DIN and 37 bytes in ISO. So, the EVSE ID is handled in 5 messages
+This signal is EVSE ID byte 24 to 31. ";
+CM_ BO_ 2147488774 "This message contains the EVSE ID byte 16 to 23.";
+CM_ SG_ 2147488774 EVSEID3 "The EVSE ID length is 32 bytes in DIN and 37 bytes in ISO. So, the EVSE ID is handled in 5 messages
+This signal is EVSE ID byte 16 to 23. ";
+CM_ BO_ 2147488773 "This message contains the EVSE ID byte 8 to 15.";
+CM_ SG_ 2147488773 EVSEID2 "The EVSE ID length is 32 bytes in DIN and 37 bytes in ISO. So, the EVSE ID is handled in 5 messages
+This signal is EVSE ID byte 8 to 15. ";
+CM_ BO_ 2147488772 "This message contains the EVSE ID byte 0 to 7.";
+CM_ SG_ 2147488772 EVSEID1 "The EVSE ID length is 32 bytes in DIN and 37 bytes in ISO. So, the EVSE ID is handled in 5 messages
+This signal is EVSE ID byte 0 to 7.";
+CM_ BO_ 2147488771 "This message contains the EVSE proclaimed current time and date.";
+CM_ SG_ 2147488771 EVSEDateTimeNow "This signal indicates the EVSE's actual time and date if it's transmitted by the EVSE.";
+CM_ BO_ 2147491844 "This message contains the current status of the user configurable GPIO pins.";
+CM_ SG_ 2147491844 GPIO7Status "This signal indicates the status of GPIO 7.";
+CM_ SG_ 2147491844 GPIO6Status "This signal indicates the status of GPIO 6.";
+CM_ SG_ 2147491844 GPIO5Status "This signal indicates the status of GPIO 5.";
+CM_ SG_ 2147491844 GPIO4Status "This signal indicates the status of GPIO 4.";
+CM_ SG_ 2147491844 GPIO3Status "This signal indicates the status of GPIO 3.";
+CM_ SG_ 2147491844 GPIO2Status "This signal indicates the status of GPIO 2.";
+CM_ SG_ 2147491844 GPIO1Status "This signal indicates the status of GPIO 1.";
+CM_ SG_ 2147491844 GPIO7ADCValue "This signal indicates the modules measured ADC value on GPIO 7 if so configured.";
+CM_ SG_ 2147491844 GPIO2ADCValue "This signal indicates the modules measured ADC value on GPIO 2 if so configured.";
+CM_ SG_ 2147491844 GPIO1ADCValue "This signal indicates the modules measured ADC value on GPIO 1 if so configured.";
+CM_ BO_ 2147491843 "This message contains status information of the current SLAC process.";
+CM_ SG_ 2147491843 MeasuredAttenuation "This signal indicates the measured attenuation as communicated by the EVSE.";
+CM_ SG_ 2147491843 LinkStatus "This signal indicates if the PLC link is established.";
+CM_ SG_ 2147491843 SLACState "This signal indicates the status of the SLAC process during communication build up phase.";
+CM_ BO_ 2147488517 "This message contains signals related to the EV's battery energy limits.";
+CM_ SG_ 2147488517 EVEnergyRequest "This signal represents the EV's requested energy for the current charging session.";
+CM_ SG_ 2147488517 EVEnergyCapacity "This signal represents the EV battery's total energy capacity.";
+CM_ BO_ 2148073472 "This message is being sent out by the bootloader when application is not running.";
+CM_ SG_ 2148073472 BootloaderVersion "Signal contains the software version of the bootloader.";
+CM_ BO_ 2147491842 "This message contains the signals for the currently present and past error codes.";
+CM_ SG_ 2147491842 ErrorCodeLevel3 "Previous error code if an additional error code has been detected.";
+CM_ SG_ 2147491842 ErrorCodeLevel2 "Previous error code if an additional error code has been detected.";
+CM_ SG_ 2147491842 ErrorCodeLevel1 "Previous error code if an additional error code has been detected.";
+CM_ SG_ 2147491842 ErrorCodeLevel0 "Newest Error Code or '1' if no error present.";
+CM_ BO_ 2147487744 "This message contains general information about the module operation and the charging state.";
+CM_ SG_ 2147487744 BCBStatus "It provides current status of B-C-B restart.";
+CM_ SG_ 2147487744 AliveCounter "Continuously incrementing counter to signal that the module's firmware is running.";
+CM_ SG_ 2147487744 EVSECompatible "This signal represents an estimation if the EV and EVSE are compatible. Ex: EVSE can charge only 400V But EV needs 800V then compatibility is false.";
+CM_ SG_ 2147487744 VoltageMatch "This signal indicates whether the EV's proclaimed battery voltage and the EVSE's supplied voltage potentially are within 20V of each other.";
+CM_ SG_ 2147487744 ControlPilotState "Calculated Control Pilot State if Control Pilot interface is controlled by the module. Otherwise, just forwarded of the value received by the VCU.";
+CM_ SG_ 2147487744 ControlPilotDutyCycle "Measured Control Pilot's duty by the module or forwarded if measured by the VCU.";
+CM_ SG_ 2147487744 TCPStatus "This signal indicates the status of the TCP connection between the EV and the EVSE.";
+CM_ SG_ 2147487744 ActualChargeProtocol "Contains the negotiated charge protocol between EVSE and EV.";
+CM_ SG_ 2147487744 SwS2Close "This signal indicates the modules desired state of the Switch S2 (Pilot Status C) when controlled by the VCU.";
+CM_ SG_ 2147487744 ProximityPinState "State of the J1772 proximity detection. 0x0 Unknown 0x1 Not Connected 0x2 Connected 0x3 Connected but not latched. It also checks the proximity resistance and maps it to the current (see value description).";
+CM_ SG_ 2147487744 StateMachineState "This signal indicated the module's current state. It shall be monitored continuously in order to decide which action to take by the VCU.";
+CM_ BO_ 2147488516 "This message contains the EV's inlet actual state.
+This message is only relevant if the EV implements the evaluation and measurement of the inlet itself.";
+CM_ SG_ 2147488516 EVProximityPinState "This signal represents the Proximity Pilot's state as measured by the VCU.";
+CM_ SG_ 2147488516 EVControlPilotState "When the module is not controlling the pilot circuit itself this value must be sent from the VCU to inform the module about the current state of the control pilot.";
+CM_ SG_ 2147488516 EVControlPilotDutyCycle "When the module is not controlling the pilot circuit itself this value must be sent from the VCU to inform the module about the current duty cycle of the control pilot.";
+CM_ BO_ 2147488770 "This message contains signals related to the EVSE's status during the current charging session.";
+CM_ SG_ 2147488770 EVSENotificationMaxDelay "This signal represents the EVSE's delay for notifications.";
+CM_ SG_ 2147488770 EVSENotification "This signal represents a notification from the EVSE to the EV.";
+CM_ SG_ 2147488770 EVSEStatusCode "This signal represents the actual status of the EVSE.";
+CM_ SG_ 2147488770 EVSEPowerLimitAchieved "This signal indicates if the EVSE is in power regulation mode.";
+CM_ SG_ 2147488770 EVSEVoltageLimitAchieved "This signal indicates if the EVSE is in voltage regulation mode.";
+CM_ SG_ 2147488770 EVSECurrentLimitAchieved "This signal indicates if the EVSE is in current limiting mode.";
+CM_ SG_ 2147488770 EVSEIsolationStatus "This signal represents the EVSE's high voltage isolation condition.";
+CM_ SG_ 2147488770 EVSEPresentCurrent "This signal represents the EVSE's measured actual current.";
+CM_ SG_ 2147488770 EVSEPresentVoltage "This signal represents the EVSE's measured actual voltage.";
+CM_ BO_ 2147488769 "This message contains the EVSE's charging voltage and current regulation limits.";
+CM_ SG_ 2147488769 EVSECurrentRegulationTolerance "This signal indicates the EVSE's current regulation capability.";
+CM_ SG_ 2147488769 EVSEPeakCurrentRipple "This signal represents the EVSE maximum current ripple capability.";
+CM_ SG_ 2147488769 EVSEMinVoltage "This signal indicates the EVSE's lowest charge voltage capability.";
+CM_ SG_ 2147488769 EVSEMinCurrent "This signal indicates the EVSE's lowest charge current capability.";
+CM_ BO_ 2147488768 "This message contains the EVSE charging limits.";
+CM_ SG_ 2147488768 EVSEEnergyToBeDelivered "This signal indicates how much energy the EVSE is willing to delivery to the EV during the current charging session.";
+CM_ SG_ 2147488768 EVSEMaxPower "This signal indicates the EVSE's maximum power capability.";
+CM_ SG_ 2147488768 EVSEMaxVoltage "This signal indicates the EVSE maximum voltage capability.";
+CM_ SG_ 2147488768 EVSEMaxCurrent "This signal indicates the EVSE maximum current capability.";
+CM_ BO_ 2147488514 "This message contains all signals related to the EV's control of the charging session.";
+CM_ SG_ 2147488514 BCBControl "It can start the B-C-B restart.";
+CM_ SG_ 2147488514 ChargeProtocolPriority "Lets the EV decide which protocol has priority in the negotiation phase with the EVSE.";
+CM_ SG_ 2147488514 EVWeldingDetectionEnable "This signal shall be set to 'True' if a welding detection shall be performed at the end of the charging session or 'False' if the welding detection phase shall be skipped.";
+CM_ SG_ 2147488514 EVReady "This signal must set to True for as long as the vehicle has not detected any critical fault preventing it from charging. If this signal is set to False during charging an emergency shutdown will be performed.";
+CM_ SG_ 2147488514 ChargeStopIndication "This signal controls the termination of the charging. 
+It should be initialized to 'NoStop' and set to 'Terminate' to exit welding detection phase.";
+CM_ SG_ 2147488514 ChargeProgressIndication "This signal should be initialized with 'Stop' and later set to 'Start' once the EV is ready to go from pre-charge into charging state.";
+CM_ BO_ 2147488515 "Only values to be displayed at the EVSE if supported by EVSE.";
+CM_ SG_ 2147488515 EVRESSConditioning "This signal indicates that the EV is using energy from the DC charger to condition the battery.";
+CM_ SG_ 2147488515 EVTimeToFullSoC "This signal represents the estimated time of the BMS until full charge is complete";
+CM_ SG_ 2147488515 EVTimeToBulkSoC "This signal represents the estimated time of the BMS until bulk charge is complete";
+CM_ SG_ 2147488515 EVErrorCode "The signal value table is derived from the DIN. It can be used to indicate various error conditions to the EVSE but is not guaranteed to be respected the EVSE. It is primarily for advanced user communication.";
+CM_ SG_ 2147488515 EVCabinConditioning "Indicated that the EV performs cabin conditioning. When True the EV is using energy from the DC supply to heat or cool the passenger compartment.";
+CM_ SG_ 2147488515 EVBulkChargingComplete "Indicates that the EV has finished bulk charging. Setting this will not lead to the end of the charging session, but it is merely an indication to the user or the EVSE.";
+CM_ SG_ 2147488515 EVChargingComplete "Indicates that the EV has finished charging and will soon stop. This signal does not stop the charging session, but is merely an indication to the user or the EVSE.";
+CM_ SG_ 2147488515 EVSoC "This signal represents the actual SoC of the EV. It is used to display the EV's SoC at the Charging Station.";
+CM_ BO_ 2147488513 "This message contains the target values for the current charging session.";
+CM_ SG_ 2147488513 EVPreChargeVoltage "This signal must be set during the precharge phase to communicate to the EVSE the current battery voltage of the EV. IT should be within 10V of the EV's battery voltage to prevent arcing.";
+CM_ SG_ 2147488513 EVTargetVoltage "This signal represents the target voltage during charging. Set this to EV battery's maximum voltage, except if you need to control the charging more carefully.";
+CM_ SG_ 2147488513 EVTargetCurrent "This signal shall represent the current you want to receive from the EVSE.";
+CM_ BO_ 2147488512 "This message contains signals related to the EV's charging limits.";
+CM_ SG_ 2147488512 EVBulkSoC "Indicated at what SoC the bulk charge will be finished. This is usually set to 80%.";
+CM_ SG_ 2147488512 EVFullSoC "This signal represents the EV's SoC at which the BMS shows fully charged. Usually set to 100%.";
+CM_ SG_ 2147488512 EVMaxVoltage "Indicated the EV's maximum charging voltage of the battery.";
+CM_ SG_ 2147488512 EVMaxPower "Indicated the EV's maximum charging power capability.";
+CM_ SG_ 2147488512 EVMaxCurrent "Represents the EV's maximum charging current capability.";
+CM_ BO_ 2147491841 "This message contains the module's firmware version and configuration information.";
+CM_ SG_ 2147491841 SoftwareVersionConfig "This signal indicates the module's configuration.";
+CM_ SG_ 2147491841 SoftwareVersionPatch "This signal indicates the module's patch firmware version number.";
+CM_ SG_ 2147491841 SoftwareVersionMinor "This signal indicates the module's minor firmware version number.";
+CM_ SG_ 2147491841 SoftwareVersionMajor "This signal indicates the module's major firmware version number.";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event-driven","On request","dummy";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 262142;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 65535;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "ISC_CMS_Automotive";
+BA_ "VFrameFormat" BO_ 2147491846 1;
+BA_ "GenMsgCycleTime" BO_ 2147491846 10000;
+BA_ "GenMsgCycleTime" BO_ 2147491845 100;
+BA_ "VFrameFormat" BO_ 2147491845 1;
+BA_ "VFrameFormat" BO_ 2147488776 1;
+BA_ "GenMsgCycleTime" BO_ 2147488776 10000;
+BA_ "GenMsgCycleTime" BO_ 2147488775 10000;
+BA_ "VFrameFormat" BO_ 2147488775 1;
+BA_ "GenMsgCycleTime" BO_ 2147488774 10000;
+BA_ "VFrameFormat" BO_ 2147488774 1;
+BA_ "GenMsgCycleTime" BO_ 2147488773 10000;
+BA_ "VFrameFormat" BO_ 2147488773 1;
+BA_ "GenMsgCycleTime" BO_ 2147488772 10000;
+BA_ "VFrameFormat" BO_ 2147488772 1;
+BA_ "VFrameFormat" BO_ 2147488771 1;
+BA_ "GenMsgCycleTime" BO_ 2147488771 100;
+BA_ "VFrameFormat" BO_ 2147491844 1;
+BA_ "GenMsgCycleTime" BO_ 2147491844 100;
+BA_ "GenMsgSendType" BO_ 2147491843 1;
+BA_ "VFrameFormat" BO_ 2147491843 1;
+BA_ "VFrameFormat" BO_ 2147488517 1;
+BA_ "GenMsgCycleTime" BO_ 2147488517 100;
+BA_ "VFrameFormat" BO_ 2148073472 1;
+BA_ "GenMsgCycleTime" BO_ 2148073472 1000;
+BA_ "VFrameFormat" BO_ 2147491842 1;
+BA_ "GenMsgCycleTime" BO_ 2147491842 1000;
+BA_ "GenMsgCycleTime" BO_ 2147487744 100;
+BA_ "VFrameFormat" BO_ 2147487744 1;
+BA_ "VFrameFormat" BO_ 2147488516 1;
+BA_ "GenMsgCycleTime" BO_ 2147488516 100;
+BA_ "VFrameFormat" BO_ 2147488770 1;
+BA_ "GenMsgCycleTime" BO_ 2147488770 100;
+BA_ "VFrameFormat" BO_ 2147488769 1;
+BA_ "GenMsgCycleTime" BO_ 2147488769 100;
+BA_ "VFrameFormat" BO_ 2147488768 1;
+BA_ "GenMsgCycleTime" BO_ 2147488768 100;
+BA_ "VFrameFormat" BO_ 2147488514 1;
+BA_ "GenMsgCycleTime" BO_ 2147488514 100;
+BA_ "VFrameFormat" BO_ 2147488515 1;
+BA_ "GenMsgCycleTime" BO_ 2147488515 100;
+BA_ "VFrameFormat" BO_ 2147488513 1;
+BA_ "GenMsgCycleTime" BO_ 2147488513 100;
+BA_ "VFrameFormat" BO_ 2147488512 1;
+BA_ "GenMsgCycleTime" BO_ 2147488512 100;
+BA_ "VFrameFormat" BO_ 2147491841 1;
+BA_ "GenMsgCycleTime" BO_ 2147491841 10000;
+BA_ "GenSigStartValue" SG_ 2147491846 EVMacAddress 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO7 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO6 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO5 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO4 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO3 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO2 0;
+BA_ "GenSigStartValue" SG_ 2147491845 ConfigGPIO1 0;
+BA_ "GenSigStartValue" SG_ 2147488776 EVSEID5 0;
+BA_ "GenSigStartValue" SG_ 2147488775 EVSEID4 0;
+BA_ "GenSigStartValue" SG_ 2147488774 EVSEID3 0;
+BA_ "GenSigStartValue" SG_ 2147488773 EVSEID2 0;
+BA_ "GenSigStartValue" SG_ 2147488772 EVSEID1 0;
+BA_ "GenSigStartValue" SG_ 2147488771 EVSEDateTimeNow 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO7Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO6Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO5Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO4Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO3Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO2Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO1Status 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO7ADCValue 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO2ADCValue 0;
+BA_ "GenSigStartValue" SG_ 2147491844 GPIO1ADCValue 0;
+BA_ "GenSigStartValue" SG_ 2147491843 MeasuredAttenuation 0;
+BA_ "GenSigStartValue" SG_ 2147491843 LinkStatus 3;
+BA_ "GenSigStartValue" SG_ 2147491843 SLACState 7;
+BA_ "GenSigStartValue" SG_ 2147488517 EVEnergyRequest 0;
+BA_ "GenSigStartValue" SG_ 2147488517 EVEnergyCapacity 0;
+BA_ "GenSigStartValue" SG_ 2148073472 BootloaderVersion 0;
+BA_ "GenSigStartValue" SG_ 2147491842 ErrorCodeLevel3 0;
+BA_ "GenSigStartValue" SG_ 2147491842 ErrorCodeLevel2 0;
+BA_ "GenSigStartValue" SG_ 2147491842 ErrorCodeLevel1 0;
+BA_ "GenSigStartValue" SG_ 2147491842 ErrorCodeLevel0 0;
+BA_ "GenSigStartValue" SG_ 2147487744 BCBStatus 0;
+BA_ "GenSigStartValue" SG_ 2147487744 AliveCounter 15;
+BA_ "GenSigStartValue" SG_ 2147487744 EVSECompatible 3;
+BA_ "GenSigStartValue" SG_ 2147487744 VoltageMatch 3;
+BA_ "GenSigStartValue" SG_ 2147487744 ControlPilotState 15;
+BA_ "GenSigStartValue" SG_ 2147487744 ControlPilotDutyCycle 0;
+BA_ "GenSigStartValue" SG_ 2147487744 TCPStatus 3;
+BA_ "GenSigStartValue" SG_ 2147487744 ActualChargeProtocol 15;
+BA_ "GenSigStartValue" SG_ 2147487744 SwS2Close 3;
+BA_ "GenSigStartValue" SG_ 2147487744 ProximityPinState 15;
+BA_ "GenSigStartValue" SG_ 2147487744 StateMachineState 15;
+BA_ "GenSigStartValue" SG_ 2147488516 EVProximityPinState 15;
+BA_ "GenSigStartValue" SG_ 2147488516 EVControlPilotState 15;
+BA_ "GenSigStartValue" SG_ 2147488516 EVControlPilotDutyCycle 0;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSENotificationMaxDelay 0;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSENotification 0;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEStatusCode 15;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEPowerLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEVoltageLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSECurrentLimitAchieved 3;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEIsolationStatus 7;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEPresentCurrent 32500;
+BA_ "GenSigStartValue" SG_ 2147488770 EVSEPresentVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488769 EVSECurrentRegulationTolerance 0;
+BA_ "GenSigStartValue" SG_ 2147488769 EVSEPeakCurrentRipple 0;
+BA_ "GenSigStartValue" SG_ 2147488769 EVSEMinVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488769 EVSEMinCurrent 32500;
+BA_ "GenSigStartValue" SG_ 2147488768 EVSEEnergyToBeDelivered 0;
+BA_ "GenSigStartValue" SG_ 2147488768 EVSEMaxPower 0;
+BA_ "GenSigStartValue" SG_ 2147488768 EVSEMaxVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488768 EVSEMaxCurrent 0;
+BA_ "GenSigStartValue" SG_ 2147488514 BCBControl 0;
+BA_ "GenSigStartValue" SG_ 2147488514 ChargeProtocolPriority 0;
+BA_ "GenSigStartValue" SG_ 2147488514 EVWeldingDetectionEnable 3;
+BA_ "GenSigStartValue" SG_ 2147488514 EVReady 3;
+BA_ "GenSigStartValue" SG_ 2147488514 ChargeStopIndication 3;
+BA_ "GenSigStartValue" SG_ 2147488514 ChargeProgressIndication 3;
+BA_ "GenSigStartValue" SG_ 2147488515 EVRESSConditioning 3;
+BA_ "GenSigStartValue" SG_ 2147488515 EVTimeToFullSoC 0;
+BA_ "GenSigStartValue" SG_ 2147488515 EVTimeToBulkSoC 0;
+BA_ "GenSigStartValue" SG_ 2147488515 EVErrorCode 15;
+BA_ "GenSigStartValue" SG_ 2147488515 EVCabinConditioning 3;
+BA_ "GenSigStartValue" SG_ 2147488515 EVBulkChargingComplete 3;
+BA_ "GenSigStartValue" SG_ 2147488515 EVChargingComplete 3;
+BA_ "GenSigStartValue" SG_ 2147488515 EVSoC 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVPreChargeVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVTargetVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488513 EVTargetCurrent 32500;
+BA_ "GenSigStartValue" SG_ 2147488512 EVBulkSoC 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVFullSoC 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVMaxVoltage 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVMaxPower 0;
+BA_ "GenSigStartValue" SG_ 2147488512 EVMaxCurrent 0;
+BA_ "GenSigStartValue" SG_ 2147491841 SoftwareVersionConfig 0;
+BA_ "GenSigStartValue" SG_ 2147491841 SoftwareVersionPatch 0;
+BA_ "GenSigStartValue" SG_ 2147491841 SoftwareVersionMinor 0;
+BA_ "GenSigStartValue" SG_ 2147491841 SoftwareVersionMajor 0;
+VAL_ 2147491845 ConfigGPIO7 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO6 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO5 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO4 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO3 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO2 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491845 ConfigGPIO1 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO7Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO6Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO5Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO4Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO3Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO2Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO1Status 3 "SNA" 1 "HIGH" 0 "LOW" ;
+VAL_ 2147491844 GPIO7ADCValue 4095 "SNA" ;
+VAL_ 2147491844 GPIO2ADCValue 4095 "SNA" ;
+VAL_ 2147491844 GPIO1ADCValue 4095 "SNA" ;
+VAL_ 2147491843 MeasuredAttenuation 255 "SNA" ;
+VAL_ 2147491843 LinkStatus 3 "SNA" 1 "Up" 0 "Down" ;
+VAL_ 2147491843 SLACState 7 "SNA" 3 "Failed" 2 "Matched" 1 "Matching" 0 "Disconnected" ;
+VAL_ 2147488517 EVEnergyRequest 65535 "SNA" ;
+VAL_ 2147488517 EVEnergyCapacity 65535 "SNA" ;
+VAL_ 2147487744 BCBStatus 3 "SNA" 1 "Active" 0 "NotActive" ;
+VAL_ 2147487744 AliveCounter 15 "SNA" ;
+VAL_ 2147487744 EVSECompatible 3 "SNA" 2 "Invalid" 1 "True" 0 "False" ;
+VAL_ 2147487744 VoltageMatch 3 "SNA" 2 "Invalid" 1 "True" 0 "False" ;
+VAL_ 2147487744 ControlPilotState 14 "Invalid" 15 "SNA" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147487744 ControlPilotDutyCycle 126 "Invalid" 127 "SNA" ;
+VAL_ 2147487744 TCPStatus 3 "SNA" 1 "TCP_Connected" 0 "Not_Connected" ;
+VAL_ 2147487744 ActualChargeProtocol 15 "SNA" 1 "DIN70121" 2 "ISO15118" 3 "Not_Supported" 0 "Not_Defined" ;
+VAL_ 2147487744 SwS2Close 3 "SNA" 0 "CommandOpen" 1 "CommandClose" ;
+VAL_ 2147487744 ProximityPinState 15 "SNA" 14 "Invalid" 6 "Type2_Connected63A" 5 "Type2_Connected32A" 4 "Type2_Connected20A" 3 "Type2_Connected13A" 2 "Type1_ConnectedButtonPressed" 1 "Type1_Connected" 0 "Not_Connected" ;
+VAL_ 2147487744 StateMachineState 15 "SNA" 0 "Default" 1 "Init" 2 "Authentication" 3 "Parameter" 4 "Isolation" 5 "PreCharge" 6 "Charge" 7 "Welding" 8 "StopCharge" 9 "SessionStop" 10 "ShutOff" 11 "Paused" 12 "Error" ;
+VAL_ 2147488516 EVProximityPinState 15 "SNA" 14 "Invalid" 6 "Type2_Connected63A" 5 "Type2_Connected32A" 4 "Type2_Connected20A" 3 "Type2_Connected13A" 2 "Type1_ConnectedButtonPressed" 1 "Type1_Connected" 0 "Not_Connected" ;
+VAL_ 2147488516 EVControlPilotState 15 "SNA" 14 "Invalid" 5 "F" 4 "E" 3 "D" 2 "C" 1 "B" 0 "A" ;
+VAL_ 2147488516 EVControlPilotDutyCycle 127 "SNA" 126 "Invalid" ;
+VAL_ 2147488770 EVSENotificationMaxDelay 65535 "SNA" ;
+VAL_ 2147488770 EVSENotification 3 "SNA" 2 "ReNogotiation" 1 "StopCharging" 0 "None" ;
+VAL_ 2147488770 EVSEStatusCode 15 "SNA" 14 "Invalid" 11 "Reserved_C" 10 "Reserved_B" 9 "Reserved_A" 8 "Reserved_9" 7 "Reserved_8" 6 "EVSE_Malfunction" 5 "EVSE_EmergencyShutdown" 4 "EVSE_IsolationMonitoringActive" 3 "EVSE_UtilityInterruptEvent" 2 "EVSE_Shutdown" 1 "EVSE_Ready" 0 "EVSE_NotReady" ;
+VAL_ 2147488770 EVSEPowerLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488770 EVSEVoltageLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488770 EVSECurrentLimitAchieved 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488770 EVSEIsolationStatus 5 "Checking" 7 "SNA" 4 "No_IMD" 3 "Fault" 2 "Warning" 1 "Valid" 0 "Invalid" ;
+VAL_ 2147488770 EVSEPresentCurrent 65535 "SNA" ;
+VAL_ 2147488770 EVSEPresentVoltage 65535 "SNA" ;
+VAL_ 2147488769 EVSECurrentRegulationTolerance 255 "SNA" ;
+VAL_ 2147488769 EVSEPeakCurrentRipple 255 "SNA" ;
+VAL_ 2147488769 EVSEMinVoltage 65535 "SNA" ;
+VAL_ 2147488769 EVSEMinCurrent 65535 "SNA" ;
+VAL_ 2147488768 EVSEEnergyToBeDelivered 65535 "SNA" ;
+VAL_ 2147488768 EVSEMaxPower 65535 "SNA" ;
+VAL_ 2147488768 EVSEMaxVoltage 65535 "SNA" ;
+VAL_ 2147488768 EVSEMaxCurrent 65535 "SNA" ;
+VAL_ 2147488514 BCBControl 3 "SNA" 1 "Start" 0 "Stop" ;
+VAL_ 2147488514 ChargeProtocolPriority 255 "SNA" 3 "ISO_first_DIN_second" 2 "DIN_first_ISO_second" 1 "ISO_only" 0 "DIN_only" ;
+VAL_ 2147488514 EVWeldingDetectionEnable 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488514 EVReady 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488514 ChargeStopIndication 3 "SNA" 2 "NoStop" 0 "Terminate" ;
+VAL_ 2147488514 ChargeProgressIndication 3 "SNA" 1 "Stop" 0 "Start" ;
+VAL_ 2147488515 EVRESSConditioning 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488515 EVTimeToFullSoC 262143 "SNA" ;
+VAL_ 2147488515 EVTimeToBulkSoC 262143 "SNA" ;
+VAL_ 2147488515 EVErrorCode 15 "SNA" 11 "NoData" 10 "FAILED_SystemIncompatibility" 9 "Reserved_C" 8 "Reserved_B" 7 "Reserved_A" 6 "FAILED_ChargingVoltageOutOfRange" 5 "FAILED_ChargingCurrentdiff" 4 "FAILED_EVRESSMalfunction" 3 "FAILED_ChargerConnectorLockFault" 2 "FAILED_EVShiftPosition" 1 "FAILED_RESSTemperatureInhibit" 0 "NO_ERROR" ;
+VAL_ 2147488515 EVCabinConditioning 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488515 EVBulkChargingComplete 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488515 EVChargingComplete 3 "SNA" 1 "True" 0 "False" ;
+VAL_ 2147488515 EVSoC 255 "SNA" ;
+VAL_ 2147488513 EVPreChargeVoltage 65535 "SNA" ;
+VAL_ 2147488513 EVTargetVoltage 65535 "SNA" ;
+VAL_ 2147488513 EVTargetCurrent 65535 "SNA" ;
+VAL_ 2147488512 EVBulkSoC 255 "SNA" ;
+VAL_ 2147488512 EVFullSoC 255 "SNA" ;
+VAL_ 2147488512 EVMaxVoltage 65535 "SNA" ;
+VAL_ 2147488512 EVMaxPower 65535 "SNA" ;
+VAL_ 2147488512 EVMaxCurrent 65535 "SNA" ;
+

@@ -352,18 +352,49 @@ void MainWindow::onRefreshChannels()
     if (m_useSimulation) {
         m_connectionWidget->setChannels(m_simInterface->availableChannels());
     } else {
-        auto channels = m_pcanDriver->availableChannels();
-        if (channels.empty()) {
-            statusBar()->showMessage("No PCAN channels found. Is PCAN-Basic installed?", 5000);
+        // First try to load the library - give clear feedback if it fails
+        if (!m_pcanDriver->isLibraryLoaded() && !m_pcanDriver->loadLibrary()) {
+            QString err = m_pcanDriver->lastError();
+            QMessageBox::warning(this, "PCAN Scan Failed",
+                "Could not load the PCAN-Basic driver library.\n\n"
+                "Please install PCAN-Basic from:\n"
+                "https://www.peak-system.com/PCAN-Basic.239.0.html\n\n"
+                "Windows: PCANBasic.dll must be in PATH or application directory\n"
+                "Linux: libpcanbasic.so must be installed (e.g. via peak-linux-driver)\n\n"
+                "Error: " + err);
+            m_connectionWidget->setChannels({});
+            statusBar()->showMessage("PCAN library not found: " + err, 10000);
+            return;
         }
+
+        auto channels = m_pcanDriver->availableChannels();
         m_connectionWidget->setChannels(channels);
+
+        if (channels.empty()) {
+            QMessageBox::information(this, "PCAN Scan",
+                "PCAN-Basic library loaded successfully, but no PCAN-USB devices were detected.\n\n"
+                "Please check:\n"
+                "- Is the PCAN-USB adapter plugged in?\n"
+                "- Are the drivers installed correctly?\n"
+                "- Is another application using the channel?");
+            statusBar()->showMessage("PCAN library OK, but no USB channels found", 5000);
+        } else {
+            statusBar()->showMessage(QString("Found %1 PCAN channel(s)").arg(channels.size()), 3000);
+        }
     }
 }
 
 void MainWindow::onSimulationToggled(bool enabled)
 {
     m_useSimulation = enabled;
-    onRefreshChannels();
+    if (enabled) {
+        // In simulation mode, channels are always available
+        m_connectionWidget->setChannels(m_simInterface->availableChannels());
+    } else {
+        // In PCAN mode, clear channels - user must click Scan to discover
+        m_connectionWidget->setChannels({});
+        statusBar()->showMessage("PCAN mode: click Scan to detect PCAN-USB adapters", 5000);
+    }
 }
 
 void MainWindow::onStartCharging()

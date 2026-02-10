@@ -99,8 +99,16 @@ void ConnectionWidget::setupUi()
 void ConnectionWidget::setChannels(const std::vector<CanInterface::ChannelInfo>& channels)
 {
     m_channelCombo->clear();
-    for (const auto& ch : channels) {
-        m_channelCombo->addItem(ch.name, ch.handle);
+    if (channels.empty()) {
+        m_channelCombo->addItem("-- No channels found --", 0);
+        m_channelCombo->setEnabled(false);
+        m_connectBtn->setEnabled(false);
+    } else {
+        m_channelCombo->setEnabled(!m_connected);
+        m_connectBtn->setEnabled(true);
+        for (const auto& ch : channels) {
+            m_channelCombo->addItem(ch.name, ch.handle);
+        }
     }
 }
 

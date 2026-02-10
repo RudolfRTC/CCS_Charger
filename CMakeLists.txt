@@ -89,3 +89,40 @@ target_link_libraries(ui_layer PUBLIC
 # ─── Main Executable ─────────────────────────────────────
 add_executable(CCSCharger src/main.cpp)
 target_link_libraries(CCSCharger PRIVATE ui_layer)
+
+# ─── Tests ───────────────────────────────────────────────
+option(BUILD_TESTS "Build unit tests" ON)
+if(BUILD_TESTS)
+    enable_testing()
+    find_package(Qt6 REQUIRED COMPONENTS Test)
+
+    # Pass source dir for DBC file lookup
+    add_compile_definitions(PROJECT_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+
+    # Helper function to add a test
+    function(add_ccs_test TEST_NAME TEST_SOURCE)
+        add_executable(${TEST_NAME} ${TEST_SOURCE})
+        target_link_libraries(${TEST_NAME} PRIVATE
+            Qt6::Test Qt6::Core
+            ${ARGN}
+        )
+        target_include_directories(${TEST_NAME} PRIVATE src)
+        add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
+    endfunction()
+
+    # CAN layer tests
+    add_ccs_test(test_can_frame tests/test_can_frame.cpp can_layer)
+    add_ccs_test(test_simulated_can tests/test_simulated_can.cpp can_layer)
+
+    # DBC layer tests
+    add_ccs_test(test_dbc_parser tests/test_dbc_parser.cpp dbc_layer can_layer)
+    add_ccs_test(test_signal_codec tests/test_signal_codec.cpp dbc_layer can_layer)
+
+    # Module layer tests
+    add_ccs_test(test_state_machine tests/test_state_machine.cpp module_layer)
+    add_ccs_test(test_safety_monitor tests/test_safety_monitor.cpp module_layer)
+    add_ccs_test(test_charge_module tests/test_charge_module.cpp module_layer logging_layer)
+
+    # Logging layer tests
+    add_ccs_test(test_logging tests/test_logging.cpp logging_layer module_layer)
+endif()
